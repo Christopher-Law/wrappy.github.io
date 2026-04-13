@@ -1,2 +1,480 @@
-For sale: Send Offers
-Email: christopher-law@live.com
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wrappy.ai is for sale</title>
+    <meta
+      name="description"
+      content="wrappy.ai is a short, memorable .ai domain available for acquisition. Ideal for AI workflow, automation, agent, and productivity companies."
+    />
+    <style>
+      :root {
+        --bg: #0a0a0d;
+        --bg-soft: #13131a;
+        --panel: rgba(255, 255, 255, 0.06);
+        --panel-strong: rgba(255, 255, 255, 0.1);
+        --text: #f7f4ec;
+        --muted: #b7b2a5;
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #ff8d5c;
+        --accent-2: #ffd66b;
+        --shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(255, 141, 92, 0.22), transparent 30%),
+          radial-gradient(circle at 85% 20%, rgba(255, 214, 107, 0.16), transparent 24%),
+          linear-gradient(180deg, #111118 0%, var(--bg) 55%, #060608 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1160px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px 0 10px;
+      }
+
+      .brand {
+        font-size: 0.88rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .status {
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 22px;
+        align-items: stretch;
+        padding: 20px 0 20px;
+      }
+
+      .hero-copy,
+      .offer-card,
+      .detail-card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        backdrop-filter: blur(16px);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-copy {
+        border-radius: 28px;
+        padding: 26px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 11px;
+        border-radius: 999px;
+        margin-bottom: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.2rem, 5.2vw, 4.3rem);
+        line-height: 0.98;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-copy p {
+        max-width: 40rem;
+        margin: 16px 0 0;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .domain-line {
+        display: inline-block;
+        margin-top: 6px;
+        color: var(--accent-2);
+      }
+
+      .inline-domain,
+      .inline-ext {
+        color: var(--text);
+        font-weight: 700;
+      }
+
+      .inline-ext {
+        color: var(--accent-2);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .button,
+      .button-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.95rem;
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .button:hover,
+      .button-secondary:hover {
+        transform: translateY(-1px);
+      }
+
+      .button {
+        background: linear-gradient(135deg, var(--accent), #ff6b4a);
+        color: #180e09;
+      }
+
+      .button-secondary {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+      }
+
+      .metrics {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .metric {
+        padding: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.86rem;
+        line-height: 1.45;
+      }
+
+      .hero-side {
+        display: grid;
+        gap: 14px;
+      }
+
+      .offer-card {
+        border-radius: 28px;
+        padding: 22px;
+      }
+
+      .offer-card h2,
+      .detail-card h3 {
+        margin: 0 0 12px;
+        font-size: 1.1rem;
+      }
+
+      .offer-card p,
+      .detail-card p,
+      .detail-card li {
+        color: var(--muted);
+        line-height: 1.55;
+        font-size: 0.94rem;
+      }
+
+      .email-box {
+        display: block;
+        margin: 16px 0;
+        padding: 13px 15px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        font-size: 0.95rem;
+        font-weight: 700;
+        word-break: break-word;
+        text-decoration: none;
+      }
+
+      .detail-card {
+        border-radius: 24px;
+        padding: 20px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .sections {
+        display: grid;
+        gap: 16px;
+        padding: 12px 0 40px;
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .card {
+        padding: 22px;
+        border-radius: 20px;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.03));
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 1.02rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+        font-size: 0.94rem;
+      }
+
+      .footer-cta {
+        margin: 4px 0 48px;
+        padding: 26px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: linear-gradient(135deg, rgba(255, 141, 92, 0.12), rgba(255, 214, 107, 0.08));
+        text-align: center;
+      }
+
+      .footer-cta h2 {
+        margin: 0;
+        font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+        letter-spacing: -0.04em;
+      }
+
+      .footer-cta p {
+        max-width: 46rem;
+        margin: 12px auto 18px;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 0.96rem;
+      }
+
+      .tiny {
+        margin-top: 12px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      @media (max-width: 960px) {
+        .hero,
+        .section-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-copy,
+        .offer-card,
+        .detail-card,
+        .card,
+        .footer-cta {
+          padding: 20px;
+        }
+
+        .topbar {
+          padding-bottom: 0;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .shell {
+          width: min(100% - 20px, 1160px);
+        }
+
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        h1 {
+          font-size: clamp(2rem, 12vw, 3rem);
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+
+        .button,
+        .button-secondary {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">wrappy.ai</div>
+        <div class="status">Premium domain available now</div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Short. Memorable. Built for AI.</div>
+            <h1>
+              Own the name<br />
+              <span class="domain-line">wrappy.ai</span>
+            </h1>
+            <p>
+              <span class="inline-domain">wrappy.ai</span> is for sale. It is a clean,
+              brandable domain with a modern <span class="inline-ext">.ai</span>
+              extension that instantly fits the AI market. Short names are rare, easy to
+              remember, easy to say, and ideal for companies that want a sharp brand from
+              day one.
+            </p>
+            <div class="actions">
+              <a class="button" href="mailto:christopher-law@live.com?subject=Offer%20for%20wrappy.ai">
+                Email an offer
+              </a>
+              <a class="button-secondary" href="#fit">Why it fits AI companies</a>
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <strong>Short</strong>
+                <span>Compact brand names are easier to type, share, and remember.</span>
+              </div>
+              <div class="metric">
+                <strong>Memorable</strong>
+                <span>Wrappy has a punchy, friendly sound that sticks quickly.</span>
+              </div>
+              <div class="metric">
+                <strong>.ai native</strong>
+                <span>The extension immediately signals an AI-first product or company.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-side">
+            <aside class="offer-card">
+              <h2>Send your offer</h2>
+              <p>
+                Serious buyers can reach out directly. If you are building an AI company,
+                product, or holding group, this domain is ready for acquisition.
+              </p>
+              <a class="email-box" href="mailto:christopher-law@live.com?subject=Offer%20for%20wrappy.ai">
+                christopher-law@live.com
+              </a>
+              <a class="button" href="mailto:christopher-law@live.com?subject=Offer%20for%20wrappy.ai">
+                Contact to offer
+              </a>
+            </aside>
+
+            <aside class="detail-card">
+              <h3>Why buyers like names like this</h3>
+              <ul>
+                <li>Easy to pronounce in demos, podcasts, and investor meetings</li>
+                <li>Strong fit for modern AI branding without sounding generic</li>
+                <li>Versatile enough for product, platform, or studio brands</li>
+              </ul>
+            </aside>
+          </div>
+        </section>
+
+        <section id="fit" class="sections">
+          <div class="section-grid">
+            <div class="card">
+              <h3>AI agents and automation</h3>
+              <p>
+                <span class="inline-domain">wrappy.ai</span> works well for agent
+                platforms, workflow automation tools, browser agents, and companies
+                helping teams wrap repetitive work into AI-powered systems.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>AI productivity products</h3>
+              <p>
+                Great for copilots, meeting assistants, document tools, prompt layers,
+                and business software that packages complex AI into a simple product.
+              </p>
+            </div>
+
+            <div class="card">
+              <h3>AI infrastructure and APIs</h3>
+              <p>
+                A strong match for orchestration tools, wrappers around foundation
+                models, developer SDKs, inference services, and API-first AI startups.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="footer-cta">
+          <h2>Acquire a brand that already sounds like the category</h2>
+          <p>
+            Whether you are launching an AI startup, rebranding an existing product, or
+            adding a premium name to a portfolio,
+            <span class="inline-domain">wrappy.ai</span> gives you a concise domain with
+            immediate category relevance.
+          </p>
+          <a class="button" href="mailto:christopher-law@live.com?subject=Offer%20for%20wrappy.ai">
+            Email christopher-law@live.com
+          </a>
+          <div class="tiny">Domain for sale: wrappy.ai</div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
